@@ -3,6 +3,7 @@ class CreateReservations < ActiveRecord::Migration
     create_table :reservations do |t|
       t.belongs_to :restaurant
       t.integer :party_size
+
       t.timestamps
     end
   end
