@@ -1,6 +1,7 @@
-<h1>All about the Chicken </h1>
+<h1>All Restaurants </h1>
 
 <% @restaurants.each do |restaurant| %>
-Hi
+<p><%= restaurant[:name] %>, <%= restaurant[:address] %>, <%= restaurant[:capacity] %></p>
+
 
 <% end %>

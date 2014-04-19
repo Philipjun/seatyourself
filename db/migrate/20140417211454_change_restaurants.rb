@@ -8,3 +8,4 @@ class ChangeRestaurants < ActiveRecord::Migration
     end
   end
 end
+

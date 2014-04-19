@@ -1,1 +1,28 @@
-edit.html.erb
+
+<h1>Edit Restaurant</h1>
+
+<%= link_to 'Back', restaurants_path %>
+
+<%= form_for @restaurant do |f| %>
+
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</div>
+
+<div class="field">
+  <%= f.label :address %><br />
+  <%= f.text_field :address %>
+</div>
+
+<div class="field">
+  <%= f.label :capacity %><br />
+  <%= f.number_field :capacity %>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>
+
