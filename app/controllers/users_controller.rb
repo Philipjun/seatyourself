@@ -8,8 +8,17 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to restaurants_url, :notice => "Signed up!"
     else
-      render "new"
+      redirect_to new_user_url
     end
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def show
   end
 
   private
