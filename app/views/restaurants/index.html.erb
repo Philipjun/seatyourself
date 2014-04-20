@@ -1,7 +1,8 @@
-<h1>All Restaurants </h1>
-
+<h1>Restaurants</h1>
 <% @restaurants.each do |restaurant| %>
-<p><%= restaurant[:name] %>, <%= restaurant[:address] %>, <%= restaurant[:capacity] %></p>
 
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
 
+  <p><%= restaurant.address %></p>
+  
 <% end %>

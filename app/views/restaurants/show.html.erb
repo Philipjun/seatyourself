@@ -1,3 +1,11 @@
-<h1>test</h1>
+<h1><%= @restaurant.name %></h1>
 
-<%= link_to "Back to restaurants", edit_restaurant_path(@restaurant) %>
+<%= link_to "Back", restaurants_path %> | <%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+<p>Address: <%= @restaurant.address %></p>
+<p>Capacity:<%= @restaurant.capacity %></p>
+
+<% if current_user %>
+ <h2>Reservations</h2>
+ <% @restaurant.reservations.each do |reservation| %>
+ <p>
+ 

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%= yield %>
+
 
 <p class="userinfo">
   <% if current_user %>
@@ -17,6 +17,9 @@
   <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
   <% end %>
 </p>
+<p><%= link_to "New Restaurant", new_restaurant_path %></p>
+
+<%= yield %>
 
 </body>
 </html>
