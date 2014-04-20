@@ -9,7 +9,6 @@
 Restaurant.create!(
   :name => "Olive Garden",
   :address => "50 Queen Street",
-  :style => "Italian",
-  :url => "http://www.news4jax.com/image/view/-/24133952/highRes/1/-/h/210/w/345/-/ta3d9e/-/OliveGarden-Daylight-Kelly2-jpg.jpg",
-  :capacity => 100
+  :capacity => 100,
+  :url "http://www.news4jax.com/image/view/-/24133952/highRes/1/-/h/210/w/345/-/ta3d9e/-/OliveGarden-Daylight-Kelly2-jpg.jpg"
   )

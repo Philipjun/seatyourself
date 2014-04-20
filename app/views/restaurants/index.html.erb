@@ -1,8 +1,7 @@
-<h1>Restaurants</h1>
+<h1>Restaurant index</h1>
 <% @restaurants.each do |restaurant| %>
-
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
-
+  <p><%= image_tag(restaurant.url) %></p>
   <p><%= restaurant.address %></p>
-  
+  <p><%= restaurant.style %></p>
 <% end %>

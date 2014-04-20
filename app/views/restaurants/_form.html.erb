@@ -1,25 +1,25 @@
 <%= form_for(@restaurant) do |f| %>
-
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
-</div>
-
-
-<div class="field">
-  <%= f.label :address %><br />
-  <%= f.text_field :address %><br />
-</div>
-
-
-
-<div class="field">
-  <%= f.label :capacity %><br />
-  <%= f.number_field :capacity %>
-</div>
-
-<div class="actions">
-  <%= f.submit %>
-</div>
-
+  <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div>
+    <%= f.label :style %><br />
+    <%= f.text_field :style %>
+  </div>
+  <div>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div>
+    <%= f.label :capacity %><br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
 <% end %>
