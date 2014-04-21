@@ -1,8 +1,19 @@
-<h1>Restaurants</h1>
+
+
+<div class="jumbotron">
+  <h1>Restaurants</h1>
+  <p>All available:</p>
 <% @restaurants.each do |restaurant| %>
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
 
   <p><%= restaurant.address %></p>
 
 <% end %>
+
+<form method="get" action="/restaurants/new" class="button_to">
+   <input value="Sign up as a new restaurant" type="submit" class="btn btn-primary btn-lg" />
+  </form>
+
+</div>
+
 

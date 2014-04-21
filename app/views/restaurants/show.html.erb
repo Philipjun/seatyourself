@@ -1,10 +1,15 @@
+
+  <div class="rest">
+
+
 <h1><%= @restaurant.name %></h1>
   <h3>
     <p>Address:<%= @restaurant.address %></p>
     <p>Category:<%= @restaurant.category %></p>
-    <p>Website:<%= @restaurant.url %></p>
+    <p><%= link_to "Click here", @restaurant.url %></a></p>
   </h3>
-
+  </div>
+  
 <% if current_user %>
   <h2>Reservations</h2>
   <% @restaurant.reservations.each do |reservation| %>
