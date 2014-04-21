@@ -11,5 +11,5 @@ Restaurant.create!(
   :address => "50 King Street",
   :category => "Italian",
   :url => "http://www.news4jax.com/image/view/-/24133952/highRes/1/-/h/210/w/345/-/ta3d9e/-/OliveGarden-Daylight-Kelly2-jpg.jpg",
-  :capacity => 100
+  :capacity => 50
   )
