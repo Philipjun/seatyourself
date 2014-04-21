@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20140417211454) do
   end
 
   create_table "restaurants", force: true do |t|
-   t.string   "name"
+    t.string   "name"
     t.string   "address"
-    t.string   "style"
+    t.string   "category"
     t.string   "url"
     t.integer  "capacity"
     t.datetime "created_at"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140417211454) do
   end
 
   create_table "users", force: true do |t|
-      t.string   "first_name"
+    t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"

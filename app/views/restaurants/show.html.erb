@@ -1,53 +1,58 @@
-<p><%= link_to "Back", restaurants_path %> | <%= link_to "Edit", edit_restaurant_path(@restaurant) %></p> 
 <h1><%= @restaurant.name %></h1>
-<p><%= image_tag(@restaurant.url) %></p>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.style %></p>
+  <h3>
+    <p>Address:<%= @restaurant.address %></p>
+    <p>Category:<%= @restaurant.category %></p>
+    <p>Website:<%= @restaurant.url %></p>
+  </h3>
 
 <% if current_user %>
-<h2>Reservations</h2>
-<% @restaurant.reservations.each do |reservation| %>
-  <p>
-    <%= reservation.party %>
-    <br>
-    <% if reservation.user != nil %>
-    by <%= reservation.user.first_name %>
-    Added on <%= reservation.created_at %>
-    <% end %>
-  </p>
-<% end %>
+  <h2>Reservations</h2>
+  <% @restaurant.reservations.each do |reservation| %>
+    <p>
+      <%= reservation.party %>
+      <br>
+      <% if reservation.user != nil %>
+        <em> by <%= reservation.user.first_name %></em>
+        Added on: <%= reservation.created_at %>
+      <% end %>
+    </p>
+  <% end %>
 
-<h3>New Reservation </h3>
-<%= form_for([@restaurant, @reservation]) do |f| %>
-  <% if @reservation.errors.any? %>
-    <div>
+  <center>
+
+  <h1>New Reservation</h1>
+  <%= form_for([@restaurant, @reservation]) do |f| %>
+    <% if @reservation.errors.any? %>
+      <div>
         <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
 
         <ul>
-          <% @reservation.errors.full_messages.each do |msg| %>
+        <% @reservation.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
-          <% end %>
-            </ul>
-          </div>
         <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
       <div>
-        Select Time Slot
-        <%= f.select(:timeslot, options_for_select(1..3))%>
-        <%= options_for_select ([['1', '1'], ['2', '2'], ['3', '3']])%>
-    </div>
+      When: 
+      <%= f.select(:timeslot, options_for_select(1..3))%>
+      <%= options_for_select ([['1', '1'], ['2', '2'], ['3', '3']])%>
+     </div>
 
-    <div>
-      <%= f.label :party %><br />
+     <div>
+
+      <%= f.label :party_size %><br />
       <%= f.number_field :party %>
     </div>
-
+    
     <div>
       <%= f.submit %>
     </div>
-    <% end %>
-
-    <% else %>
-    <p>Please <%= link_to "log in", new_session_path %> to make a reservation. </p>
-    <% end %>
-
-    
+    <p><%= link_to "Back", restaurants_path %> | <%= link_to "Edit", edit_restaurant_path(@restaurant) %></p> 
+ 
+  </center>
+  <% end %>
+<% else %>
+  <p>Please <%= link_to "log in", new_session_path %> to make a reservation.</p>
+<% end %>
