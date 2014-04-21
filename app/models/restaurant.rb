@@ -12,7 +12,7 @@ class Restaurant < ActiveRecord::Base
     20 #8pm 
   end
 
-  def time_slots
+  def time_slot
     reservation_interval = 1.hour 
     start_time = Time.zone.now + 10.minutes
     start_time = Time.zone.at (

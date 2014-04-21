@@ -3,11 +3,18 @@
 <div class="jumbotron">
   <h1>Restaurants</h1>
   <p>All available:</p>
+
 <% @restaurants.each do |restaurant| %>
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
-
   <p><%= restaurant.address %></p>
-
+  
+<div class="row">
+  <div class="col-md-4">
+    <a class="thumbnail">
+      <%= image_tag restaurant.url %>
+    </a>
+  </div>
+</div>
 <% end %>
 
 <form method="get" action="/restaurants/new" class="button_to">

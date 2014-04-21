@@ -6,6 +6,8 @@ class CreateReservations < ActiveRecord::Migration
       t.string :time
       t.integer :user_id
       t.integer :restaurant_id
+      t.integer :timeslot
+
 
       t.timestamps
     end
