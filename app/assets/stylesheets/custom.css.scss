@@ -83,11 +83,11 @@ p {
 
 /* footer */
 
-footer {
+.footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid 428bca;
-  background-color: #005E82;
+  background-color: #007DAD;
 }
 
 footer a {
@@ -118,6 +118,7 @@ footer ul li {
     background-color:#005E82;
     color:#ffffff;
     border-radius:0;
+    height: 100px;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -130,4 +131,6 @@ footer ul li {
 .navbar-custom .navbar-brand {
     color:#eeeeee;
 }
+
+
 

@@ -6,7 +6,7 @@
         <ul class="nav pull-right">
 
   <form class="form-inline" role="form">
-
+<p></p>
     <label class="srA-only" for=":email">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
      
@@ -39,7 +39,7 @@
   <% if current_user %>
   <h4>Signed in as <%= current_user.email %></h4> 
   <% else %>
-  <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+  <%= link_to "Sign up", new_user_path %>
   <% end %>
 
         </ul>
