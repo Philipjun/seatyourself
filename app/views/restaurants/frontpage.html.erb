@@ -1,5 +1,4 @@
-
-  <h1>Restaurants</h1>
+<h1></h1>
 
 
   <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -36,23 +35,5 @@
   </a>
 </div>
 
-
-
-<% @restaurants.each do |restaurant| %>
-  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
-  <p><%= restaurant.address %></p>
-
-
-<% end %>
-
-
-<center>
-<form method="get" action="/restaurants/new" class="button_to">
-   <input value="Sign up as a new restaurant" type="submit" class="btn-custom" />
-  </form>
-</center>
-</br>
-
-
-
+</br />
 
