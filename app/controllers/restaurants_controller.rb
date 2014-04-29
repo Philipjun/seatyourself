@@ -9,9 +9,9 @@ class RestaurantsController < ApplicationController
 
   def search
     @restaurants = Restaurant.where("name ILIKE ?", "%#{params[:search]}%")
-    render @ restaurants
+    render @restaurant
   end
-  
+
 
   def show
     @restaurant = Restaurant.find(params[:id])

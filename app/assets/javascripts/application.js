@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('#search-form').submit(function(event){
+      event.preventDefault();
+      var searchValue = $('#search').val();
+
+      $.ajax({
+        url: /restaurants/search?search=' + searchValue.
+        type: 'GET',
+        dataType: 'html'
+      }).done(function(data);
+       });
+  });
+});
