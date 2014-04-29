@@ -5,6 +5,10 @@ class RestaurantsController < ApplicationController
     else
       Restaurant.all
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def search
