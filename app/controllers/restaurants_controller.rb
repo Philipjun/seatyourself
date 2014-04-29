@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
     def index
     @restaurants = if params[:search]
-      Restaurant.where("name ILIKE ?", "%#{params[:search]}%")
+      Restaurant.where("lower(name) like ?", "%#{params[:search]}%")
     else
       Restaurant.all
     end
@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
   end
 
   def search
-    @restaurants = Restaurant.where("name ILIKE ?", "%#{params[:search]}%")
+    @restaurants = Restaurant.where("lower(name) like ?", "%#{params[:search]}%")
     render @restaurant
   end
 
