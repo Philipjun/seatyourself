@@ -1,5 +1,11 @@
 <h1></h1>
-
+<pre id="products"></pre>
+<script type="text/javascript">
+    function display_products(response) {
+        $('#products').text(response);
+    }
+    $.get('http://www.lcboapi.com/products.json', display_products);
+</script>
 
   <div id="carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -36,4 +42,5 @@
 </div>
 
 </br />
+
 

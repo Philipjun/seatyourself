@@ -29,18 +29,19 @@
     <button type="submit" class="btn btn-default"><%= link_to "Log out", session_path("current"), :method => :delete %>
       </button>
 
-</form>
-
- </nav>
-  
-  </div>
-      </div>
+      
           
   <% if current_user %>
   <h4>Signed in as <%= current_user.email %></h4> 
   <% else %>
   <%= link_to "Sign up", new_user_path %>
   <% end %>
+  </form>
+
+</nav>
+  
+  </div>
+      </div>
 
         </ul>
       </nav>
