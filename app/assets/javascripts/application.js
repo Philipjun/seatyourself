@@ -22,6 +22,7 @@ $(document).ready(function() {
     $.getScript('/restaurants?search=' + searchValue);
   });
 });
+/
 
 
 
