@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
     @restaurants = if params[:search]
-      Restaurant.where("lower(name) like ?", "%#{params[:search]}%")
+      Restaurant.near(params[:search])
     else
       Restaurant.all  
     end
@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-
+    @nearbys = @restaurant.nearbys(0.5, units: :km)
     if current_user
       @reservation = @restaurant.reservations.build
     end

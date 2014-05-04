@@ -1,4 +1,5 @@
 
+
   <h1>Restaurants</h1>
 
 
@@ -36,15 +37,10 @@
   </a>
 </div>
 
-
 <%= form_tag restaurants_path, method: :get, authentication: false, id: 'search-form' do %>
 <%= text_field_tag :search, params[:search] %>
 <%= submit_tag "Search" %>
 <% end %>
-
-<div id="rest">
-  <%= render @restaurants %>
-</div>
 
 
 <% @restaurants.each do |restaurant| %>

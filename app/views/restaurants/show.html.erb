@@ -8,7 +8,14 @@
     <p><%= @restaurant.category %></p>
     <p><%= image_tag @restaurant.url %></p>
 
-
+  <% if @nearbys.present? %>
+    <h2>Nearby Restaurants</h2>
+      <ul>
+        <% @nearbys.each do |n| %>
+        <li><%= "#{n.name}: #{n.distance} kms away" %></li>
+        <% end %>
+      </ul>
+      <% end %>
   </h3>
   </div>
   
@@ -40,6 +47,7 @@
         </ul>
       </div>
     <% end %>
+
     <%= f.label :user %>:
     <%= f.text_field :user %><br />
 
@@ -55,7 +63,14 @@
     <p><%= link_to "Back", restaurants_path %> | <%= link_to "Edit", edit_restaurant_path(@restaurant) %> | </p> 
  
   </center>
+
   <% end %>
+
+
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to make a reservation.</p>
 <% end %>
+
+
+
+
