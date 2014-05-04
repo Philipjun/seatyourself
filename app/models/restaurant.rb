@@ -4,6 +4,9 @@ class Restaurant < ActiveRecord::Base
   
   # has_many :owners, class: "User", foreign_key: "restaurant_id"
 
+geocoded_by :address
+after_validation :geocode, if: :address_changed?
+
   def opening_hour
     11 # 11am
   end
